@@ -11,11 +11,10 @@ for drive in c.Win32_LogicalDisk ():
         usb_letter = drive.Caption
        
 # defining source and destination paths
-src = r"C:\Users\Abdallah\Desktop"
-# src = r"G:\\"
+src = "C:\\Users\\Abdallah\\Desktop"
 dst = f"{usb_letter}\\"
 
-
+# defining extension files to transfer
 exts = ['pdf','docx','txt','png','jpeg','exe']
 
 for ext in exts:
@@ -23,6 +22,5 @@ for ext in exts:
     files = glob.iglob(os.path.join(src, f"*.{ext}"))
     for fname in files:
     # copying the files in root directory to the destination directory
-        # shutil.copy2(os.path.join(src, fname), dst)
-    # copying the files in root directory and sub directories to the destination directory
-        shutil.copytree(os.path.join(src, fname), dst)
+        shutil.copy2(os.path.join(src, fname), dst)
+

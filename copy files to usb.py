@@ -15,7 +15,7 @@ src = "C:\\Users\\Abdallah\\Desktop"
 dst = f"{usb_letter}\\"
 
 # defining extension files to transfer
-exts = ['pdf','docx','txt','png','jpeg','exe']
+exts = ['pdf','docx','txt','png','jpeg','jpg','exe']
 
 for ext in exts:
     #listeing all files with specific extension
